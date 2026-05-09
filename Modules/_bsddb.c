@@ -6190,7 +6190,6 @@ DBEnv_txn_recover(DBEnvObject* self)
             }
             if (PyTuple_SetItem(tuple, 1, (PyObject *)txn)) {
                 Py_DECREF(list);
-                Py_DECREF(txn);
                 Py_DECREF(tuple); /* This delete the "gid" also */
                 return NULL;
             }
