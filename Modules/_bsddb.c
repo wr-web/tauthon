@@ -6184,7 +6184,6 @@ DBEnv_txn_recover(DBEnvObject* self)
             }
             if (PyTuple_SetItem(tuple, 0, gid)) {
                 Py_DECREF(list);
-                Py_DECREF(gid);
                 Py_DECREF(txn);
                 Py_DECREF(tuple);
                 return NULL;
